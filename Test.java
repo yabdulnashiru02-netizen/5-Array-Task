@@ -3,15 +3,15 @@ public class Test{
     public static void main(String[] args){
         int[] Array ={2,5,8,3,4,6,10,15,20,1,11};
         Scanner input = new Scanner(System.in);
-        // System.out.println("Enter a number in the Array:");
-        // int val = input.nextInt();
-        // //task 1
-        // for (int i = 0; i < Array.length ; i++){
-        //     if (val== Array[i]){
-        //         System.out.print(i);
+        System.out.println("Enter a number in the Array:");
+        int val = input.nextInt();
+        //task 1
+        for (int i = 0; i < Array.length ; i++){
+            if (val== Array[i]){
+                System.out.print(i);
             }
         }
-        //task 2
+        // task 2
         System.out.print("Enter first number to swap: ");
         int num1 =input.nextInt();
         System.out.print("Enter second number to swap: ");
@@ -26,6 +26,7 @@ public class Test{
             if(Array[i]==num2){
                 index2 =i;
             }
+        }
         if (index1 != -1 && index2!= -1){
             int now = Array[index1];
             Array[index1] =Array[index2];
@@ -33,9 +34,27 @@ public class Test{
             System.out.println("Array after swapping:");
             for (int n : Array) {
                 System.out.print(n + " ");
+            }
+            System.out.println();
+        }
+        // Task 3
+        for (int i =0 ; i < Array.length -1 ; i++){
+            for (int j =0; j < Array.length -1 -i ; j++){
+                if (Array[j] > Array[j+1]){
+                    int so= Array[j];
+                    Array[j]= Array[j+1];
+                    Array[j+1] = so;
+                }
+            }
+        }
+        System.out.println("Array after sorting:");
+        for (int n : Array) {
+            System.out.print(n + " ");
         }
         System.out.println();
+
+        // task 4
+
     }
-        }
-    }
+
 }
